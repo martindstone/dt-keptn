@@ -5,6 +5,7 @@ metadata:
 spec:
   webhooks:
     - type: sh.keptn.event.mytask-silent.triggered
+      sendFinished: true
       requests:
         - curl --request POST --data '{{js .data}}'
           https://webhook.site/95ace2ec-c07d-4da7-bcf3-4b45d7b1515c
