@@ -11,3 +11,8 @@ spec:
           '{"event":"{{.type}}","stage":"{{.data.stage}}","custom":"{{.data.custom}}","shkeptncontext":"{{.shkeptncontext}}","id":"{{.id}}"}'
           https://webhook.site/95ace2ec-c07d-4da7-bcf3-4b45d7b1515c
       subscriptionID: a38e15fb-d324-4036-89b7-a266d00a6bf3
+    - type: sh.keptn.event.evaluation.finished
+      requests:
+        - curl --request POST --data '{  {{.data}}}'
+          https://webhook.site/95ace2ec-c07d-4da7-bcf3-4b45d7b1515c
+      subscriptionID: 0802131a-d850-4915-aa51-36afb1c69c37
