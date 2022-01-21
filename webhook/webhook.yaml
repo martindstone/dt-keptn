@@ -16,6 +16,7 @@ spec:
           https://webhook.site/95ace2ec-c07d-4da7-bcf3-4b45d7b1515c
       subscriptionID: 4afae022-10c1-4c38-8a71-5365269811fb
     - type: sh.keptn.event.mytask-silent.triggered
+      sendFinished: true
       requests:
         - curl --request POST --data
           '{"event":"{{.type}}","stage":"{{.data.stage}}","custom":"{{.data.custom}}","shkeptncontext":"{{.shkeptncontext}}","id":"{{.id}}"}'
